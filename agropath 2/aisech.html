@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGROPATH - Smarter Choices, Better Harvests</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header styles */
+        .header {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 15px;
+            /* margin-top:175px; */
+            /* margin-bottom:px; */
+            height: 60px;
+            background-color: white;
+            border-top: 4px solid #4CAF50;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo-container1 {
+            margin-top: -180px;
+            margin-bottom: -162px;
+            display: flex;
+            align-items: center;
+            height: 400px;
+            width: 400px;
+        }
+
+        .logo-img {
+            margin-top: 15px;
+            height: 60px;
+        }
+
+        .logo-text {
+            font-size: 33px;
+            font-weight: bold;
+            margin-left: 10px;
+            margin-top: 20px;
+            font-family: 'covered by your grace', cursive;
+            color: #4CAF50;
+            font-weight: bold;
+            padding-top: 2px;
+
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            color: #4CAF50;
+        }
+
+        .contact-text {
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+        }
+
+        .contact-text strong {
+            font-size: 14px;
+        }
+
+        /* Navigation styles */
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            background-color: #f9f9f9;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: #4CAF50;
+        }
+
+        .nav-menu a.active {
+            color: #4CAF50;
+        }
+
+        .dropdown-icon::after {
+            content: "▼";
+            font-size: 10px;
+            margin-left: 5px;
+        }
+
+        .search-cart {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* Hero section styles */
+        .hero {
+            /* margin-top: -150px; */
+            position: relative;
+            height: 750px;
+            /* margin-top: 150px; */
+            display: flex;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+            box-shadow: #222 20px 0px 50px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin-left: 50px;
+            z-index: 1;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .text-leaf {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-family: 'Covered By Your Grace', cursive;
+            font-size: 64px;
+            color: #FFA500;
+            line-height: 1.2;
+            width: 550px;
+
+        }
+
+        .leaf {
+            height: 50px;
+            margin-top: 10px;
+            margin-right: -5px;
+            margin-left: -160px;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 450px;
+            line-height: 1.6;
+        }
+
+
+        /* Feature cards styles */
+        .feature-cards {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 50px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            width: 23%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .feature-number {
+            color: #FFA500;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .feature-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        /* Weather section styles */
+        .weather-section {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            padding: 20px 50px;
+        }
+
+        /* Image section styles */
+        .image-section {
+            flex: 1;
+            position: relative;
+            min-width: 420px;
+        }
+
+        .main-image {
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .secondary-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+            border: 8px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .secondary-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Content section styles */
+        .content-section {
+            flex: 1;
+            padding-left: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .subheading {
+            font-size: 22px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 550px;
+        }
+
+        /* Features section */
+        .features-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .feature-text {
+            font-weight: bold;
+            color: #333;
+            line-height: 1.3;
+        }
+
+        /* Bullet points */
+        .bullet-points {
+            margin-bottom: 30px;
+        }
+
+        .bullet-point {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+
+        .bullet {
+            width: 10px;
+            height: 10px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Button */
+        .explore-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            width: fit-content;
+        }
+
+        .explore-button:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Decorative elements */
+        .hero-decoration {
+            position: absolute;
+            right: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .circle.filled {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Torn paper effect */
+        .torn-paper {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-color: #f9f9f9;
+            clip-path: polygon(0% 100%, 8% 90%, 15% 100%, 25% 85%, 35% 100%, 45% 90%, 55% 100%, 65% 85%, 75% 100%, 85% 90%, 95% 100%, 100% 85%, 100% 100%);
+        }
+
+        .roadmap {
+            padding: 80px 0;
+            background-color: #f5f5f0;
+        }
+
+        .roadmap h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: #333;
+        }
+
+        .roadmap-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .roadmap-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            width: 250px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .roadmap-img {
+            width: 100%;
+            height: 150px;
+            background-color: #f0f0f0;
+            /* Placeholder for image */
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .roadmap-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .roadmap-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* Roadmap Layout */
+        .roadmap-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .arrow-right,
+        .arrow-left,
+        .arrow-down {
+            position: relative;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow-right:after {
+            content: '→';
+            font-size: 30px;
+            color: #4CAF50;
+        }
+
+        .arrow-left:after {
+            content: '←';
+            font-size: 30px;
+            color: #4CAF50;
+        }
+
+        .arrow-down {
+            /* height: 50px; */
+            /* margin: 0 auto; */
+            position: relative;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow-down:after {
+            content: '↓';
+            font-size: 30px;
+            color: #4CAF50;
+        }
+
+        .roadmap-bottom {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .chatbot {
+            background-color: rgba(217, 215, 199, 1);
+            padding: 60px 0;
+        }
+
+        .chatbot .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Chatbot content styles */
+        .chatbot-content {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .chatbot-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .chatbot-content p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Image section styling */
+        .image-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container {
+            width: 400px;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            margin-top: 15px;
+
+        }
+
+        .brand-container img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            .chatbot .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .chatbot-content {
+                padding-right: 0;
+            }
+
+            .cta-button {
+                margin-top: 20px;
+            }
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+        }
+
+        .footer-main {
+            padding: 60px 0;
+        }
+
+        .footer-main .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo .logo-img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            /* background-color: #333; */
+            /* Placeholder for logo */
+        }
+
+        .footer-logo span {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4CAF50;
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .social-icons {
+            display: flex;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #4CAF50;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #4CAF50;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #4CAF50;
+            padding-left: 5px;
+        }
+
+        .newsletter-form {
+            display: flex;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .newsletter-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .footer-bottom {
+            background-color: #111;
+            padding: 20px 0;
+        }
+
+        .footer-bottom .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links a {
+            margin-left: 20px;
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #4CAF50;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .features .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-main .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .logo-img1 {
+            height: 50px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container1">
+            <img src="Farm_in_village-removebg-preview 1.png" alt="AGROPATH Logo" class="logo-img">
+            <div class="logo-text" style="color: #FFA500;">AGROPATH-</div>
+            <div class="logo-text" style="font-weight: lighter;">Scientific</div>
+            <div class="logo-text" style="font-weight: lighter">Farming</div>
+        </div>
+
+    </header>
+
+    <!-- Navigation -->
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Hero background image -->
+        <img src="div.elementor-repeater-item-5887cc6.jpg" alt="Farmer in field" class="hero-bg">
+
+        <div class="hero-content">
+            <div class="hero-subtitle">WELCOME TO AGROPATH</div>
+            <div class="text-leaf">
+                <h1 class="hero-title">Smarter Choices,<br>Better Harvests</h1>
+                <img src="leaf-01.webp.png" alt="Leaf decoration" class="leaf">
+            </div>
+            <p class="hero-description">Empowering farmers with essential tools and information for efficient farming
+                and successful crop management.</p>
+        </div>
+
+        <div class="hero-decoration">
+            <div class="circle"></div>
+            <div class="circle filled"></div>
+            <div class="circle"></div>
+        </div>
+
+        <div class="torn-paper"></div>
+    </section>
+
+    <!-- Feature Cards -->
+    <section class="feature-cards">
+        <div class="feature-card">
+            <!-- <div class="feature-number">Feature 01</div> -->
+            <h3 class="feature-title">KrishiMitra</h3>
+            <div class="feature-img">
+                <img src="KrishiMitra.png" alt="KrishiMitra" width="100" height="100">
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <!-- <div class="feature-number">Feature 02</div> -->
+            <h3 class="feature-title">Farming Guide</h3>
+            <div class="feature-img">
+                <img src="Farming-Guide.png" alt="Farming Guide" width="100" height="100">
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <!-- <div class="feature-number">Feature 03</div> -->
+            <h3 class="feature-title">Market Place</h3>
+            <div class="feature-img">
+                <img src="Market.png" alt="Market Place" width="100" height="100">
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <!-- <div class="feature-number">Feature 04</div> -->
+            <h3 class="feature-title">Rain Forecasting</h3>
+            <div class="feature-img">
+                <img src="weTHER.png" alt="Rain Forecasting" width="100" height="100">
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Forecasting Section -->
+    <section class="weather-section">
+        <div class="image-section">
+            <!-- Main circular image (harvester in field) -->
+            <div class="main-image">
+                <img src="weather1.png" alt="Harvester in field at sunset">
+            </div>
+
+            <!-- Secondary circular image (field with clouds) -->
+            <div class="secondary-image">
+                <img src="weather2.png" alt="Field with blue sky and clouds">
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h1>Weather Forecasting<br>& Rain Prediction</h1>
+
+            <p class="subheading">Stay Ahead with Smart Weather &<br>Rainfall Insights</p>
+
+            <p class="description">
+                Get real-time weather updates and accurate rainfall predictions to
+                plan your farming activities efficiently. Make data-driven decisions to
+                protect your crops and maximize yield.
+            </p>
+
+            <div class="features-container">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="Fruits.svg" alt="Fruits and vegetables icon">
+                    </div>
+                    <div class="feature-text">
+                        Growing fruits<br>vegetables
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <img src="chemical.svg" alt="Ripening fruits icon">
+                    </div>
+                    <div class="feature-text">
+                        Tips for ripening<br>your fruits
+                    </div>
+                </div>
+            </div>
+
+            <div class="bullet-points">
+                <div class="bullet-point">
+                    <div class="bullet"></div>
+                    <div>Access Real-Time Weather Insights.</div>
+                </div>
+                <div class="bullet-point">
+                    <div class="bullet"></div>
+                    <div>Receive Accurate Rainfall Forecasts.</div>
+                </div>
+            </div>
+
+            <div class="weather-forecast">
+                <a href="http://127.0.0.1:5000" target="_blank" class="explore-button">Explore More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="roadmap">
+        <div class="container">
+            <h2>ROADMAP</h2>
+
+            <div class="roadmap-container">
+                <div class="roadmap-card">
+                    <div class="roadmap-img">
+                        <img src="This is my first post.jpeg" alt="Step 1" width="210" height="150">
+                    </div>
+                    <h4>Crop Selection Based on Soil Analysis</h4>
+                    <p>AI recommends best crops for your soil</p>
+                    <a href="https://ph-friend.lovable.app/"  target="_blank" class="btn btn-small">Learn More</a>
+                </div>
+
+                <div class="arrow-right"></div>
+
+                <div class="roadmap-card">
+                    <div class="roadmap-img">
+                        <img src="IoT, Internet of Things, Agriculture concept.jpeg" alt="Step 2" width="210"
+                            height="150">
+                    </div>
+                    <h4>Personalized Farming Schedule</h4>
+                    <p>Custom calendar for your crops</p>
+                    <!-- <a href="#" class="btn btn-small">Learn More</a> -->
+                </div>
+
+                <div class="arrow-right"></div>
+
+                <div class="roadmap-card">
+                    <div class="roadmap-img">
+                        <img src="zenith.jpeg" alt="Step 3" width="210" height="150">
+                    </div>
+                    <h4>Disease Detection & Treatment</h4>
+                    <p>Early identification of crop issues</p>
+                    <!-- <a href="#" class="btn btn-small">Learn More</a> -->
+                </div>
+
+                <div class="arrow-down"></div>
+
+                <div class="roadmap-bottom">
+                    <div class="roadmap-card">
+                        <div class="roadmap-img">
+                            <img src="service-small-image-2.webp.png" width="210" height="150" alt="Step 5">
+                        </div>
+                        <h4>Market Connection & Sales</h4>
+                        <p>Direct access to buyers</p>
+                        <a href="https://submission-sunflower.lovable.app/submissions" target="_blank" class="btn btn-small">Learn
+                            More</a>
+                    </div>
+
+                    <div class="arrow-left"></div>
+
+                    <div class="roadmap-card">
+                        <div class="roadmap-img">
+                            <img src="/Leonisa’s Commitment to Sustainability Through Eco-Friendly Clothing.jpeg"
+                                alt="Step 4" width="210" height="150">
+                        </div>
+                        <h4>Harvest Optimization</h4>
+                        <p>Best practices for maximum yield</p>
+                        <!-- <a href="#" class="btn btn-small">Learn More</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Chatbot Section -->
+    <section class="chatbot">
+        <div class="container">
+            <!-- Left content section -->
+            <div class="chatbot-content">
+                <h2>KrishiMitra: AI Chatbot</h2>
+                <p>
+                    Meet KrishiMitra, your smart AI assistant designed to simplify farming decisions. From weather
+                    updates
+                    and crop recommendations
+                    to pest control and market insights, KrishiMitra provides instant, reliable guidance tailored to
+                    your
+                    needs. Ask, learn, and grow
+                    with KrishiMitra—your trusted partner in modern farming!
+                </p>
+                <button class="cta-button">
+                    Ask KrishiMitra</button>
+            </div>
+
+            <!-- Right image section -->
+            <div class="image-section">
+                <div class="logo-container">
+                    <img src="WhatsApp_Image_2025-03-10_at_07.27.43_35a41638-removebg-preview.png"
+                        alt="KrishiMitra Logo" height="100%">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-img1">
+                            <img src="Farm_in_village-removebg-preview 1.png" alt="AGROPATH Logo" width="50px">
+                        </div>
+                        <span>AGROPATH</span>
+                    </div>
+                    <p>Transforming agriculture with AI and data-driven insights for farmers.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Weather Prediction</a></li>
+                        <li><a href="#">Crop Recommendation</a></li>
+                        <li><a href="#">Disease Detection</a></li>
+                        <li><a href="#">Market Prices</a></li>
+                        <li><a href="#">AI Chatbot</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for the latest updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 AGROPATH. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "QG6k9pgz45xiTjV_1g_uJ"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+    </script>
+</body>
+
+</html>
